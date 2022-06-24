@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/pokemon_db");
+mongoose.connect("mongodb://localhost/habit-forming-app");
 
 mongoose.Promise = Promise;
 
