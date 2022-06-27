@@ -2,6 +2,7 @@ const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
 const userHabitsSchema = new Schema({
+  username: String,
   habitName: String,
   goal: String,
   daysOfWeek: {

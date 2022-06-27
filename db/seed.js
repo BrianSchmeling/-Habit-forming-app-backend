@@ -16,7 +16,7 @@ Habits.deleteMany({}).then(() => {
     },
   ]).then((habit) => {
     console.log(habit);
-    res.json(habit);
+    // res.json(habit);
     process.exit();
   });
 });
