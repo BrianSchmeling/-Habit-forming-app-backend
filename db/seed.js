@@ -1,4 +1,5 @@
 const Habits = require("../models/Habits");
+const UserLogin = require("../models/UserLogin");
 
 Habits.deleteMany({}).then(() => {
   Habits.create([
@@ -20,3 +21,38 @@ Habits.deleteMany({}).then(() => {
     process.exit();
   });
 });
+
+UserLogin.deleteMany({}).then(() => {
+  UserLogin.create([
+    {
+      username: "artan",
+      email: "artan@gmail.com",
+      password: 123456,
+    },
+    {
+      username: "brian",
+      email: "brian@gmail.com",
+      password: 654321,
+    },
+    {
+      username: "jeff",
+      email: "jeff@gmail.com",
+      password: 2468,
+    },
+    {
+      username: "oktay",
+      email: "oktay@gmail.com",
+      password: 13579,
+    },
+    {
+      username: "random",
+      email: "random@gmail.com",
+      password: 123456789,
+    },
+  ]).then((login) => {
+    console.log(login);
+    res.json(login);
+    process.exit();
+  });
+});
+
