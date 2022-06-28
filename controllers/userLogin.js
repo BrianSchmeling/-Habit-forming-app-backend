@@ -7,12 +7,11 @@ module.exports = {
     });
   },
   login: async (req, res, next) => {
+    console.log(req.body);
     try {
       const user = await UserLogin.findOne({
-        body: JSON.stringify({
-          username: req.body.username,
-          password: req.body.password,
-        }),
+        username: req.body.username,
+        password: req.body.password,
       });
       if (!user) {
         res.status(401).json({
