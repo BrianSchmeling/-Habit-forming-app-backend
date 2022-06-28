@@ -1,5 +1,6 @@
 const Habits = require("../models/Habits");
 const UserLogin = require("../models/UserLogin");
+const UserHabits = require("../models/UserHabits")
 
 Habits.deleteMany({}).then(() => {
   Habits.create([
@@ -53,3 +54,56 @@ UserLogin.deleteMany({}).then(() => {
     process.exit();
   });
 });
+
+UserHabits.deleteMany({}).then(() => {
+  UserHabits.create([
+    {
+      username: "random",
+      habitName: "Drinking water",
+      goal: "To drink more water",
+      daysOfWeek: {
+        monday: true,
+        tuesday: true,
+        wednesday: true,
+        thursday: true,
+        friday: true,
+        saturday: true,
+        sunday: true,
+      },
+      startingDate: 7/28/2022,
+      targetDate: 8/28/2022,
+    },
+    {
+      username: "artan",
+      habitName: "Tango",
+      goal: "Get better at dancing tango",
+      daysOfWeek: {
+        monday: false,
+        tuesday: false,
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: true,
+        sunday: true,
+      },
+      startingDate: 7/28/2022,
+      targetDate: 9/14/2022,
+    },
+    {
+      username: "jeff",
+      habitName: "coding",
+      goal: "To build coding stamina.",
+      daysOfWeek: {
+        monday: true,
+        tuesday: true,
+        wednesday: true,
+        thursday: true,
+        friday: true,
+        saturday: false,
+        sunday: false,
+      },
+      startingDate: 7/28/2022,
+      targetDate: 9/14/2022,
+    }
+  ])
+})
