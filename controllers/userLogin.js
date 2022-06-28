@@ -9,8 +9,10 @@ module.exports = {
   login: async (req, res, next) => {
     try {
       const user = await UserLogin.findOne({
-        username: req.body.username,
-        password: req.body.password,
+        body: JSON.stringify({
+          username: req.body.username,
+          password: req.body.password,
+        }),
       });
       if (!user) {
         res.status(401).json({
@@ -34,9 +36,11 @@ module.exports = {
     const { username, password, email } = req.body;
     try {
       await UserLogin.create({
-        username,
-        email,
-        password,
+        body: JSON.stringify({
+          username: req.body.username,
+          email: req.body.email,
+          password: req.body.password,
+        }),
       }).then((user) =>
         res.status(200).json({
           message: "User successfully created",
