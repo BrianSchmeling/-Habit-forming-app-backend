@@ -9,8 +9,10 @@ module.exports = {
   login: async (req, res, next) => {
     try {
       const user = await UserLogin.findOne({
-        username: req.body.username,
-        password: req.body.password,
+        body: JSON.stringify({
+            username: req.body.username,
+            password: req.body.password,
+          })
       });
       if (!user) {
         res.status(401).json({
