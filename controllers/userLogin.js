@@ -32,14 +32,12 @@ module.exports = {
     }
   },
   register: async (req, res, next) => {
-    const { username, password, email } = req.body;
+    console.log(req.body);
     try {
       await UserLogin.create({
-        body: JSON.stringify({
-          username: req.body.username,
-          email: req.body.email,
-          password: req.body.password,
-        }),
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
       }).then((user) =>
         res.status(200).json({
           message: "User successfully created",
