@@ -20,7 +20,7 @@ module.exports = {
         })
     },
     edit: (req, res) => {
-        UserHabits.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        UserHabits.findOneAndUpdate({habitName: req.params.habitName}, req.body, {new: true})
         .then(userhabit => {
             res.json(userhabit)
         })
