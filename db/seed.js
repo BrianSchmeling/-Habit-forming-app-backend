@@ -17,7 +17,7 @@ Habits.deleteMany({}).then(() => {
   ]).then((habit) => {
     console.log(habit);
     // res.json(habit);
-    process.exit();
+    // process.exit();
   });
 });
 
@@ -51,7 +51,7 @@ UserLogin.deleteMany({}).then(() => {
   ]).then((login) => {
     console.log(login);
     res.json(login);
-    process.exit();
+    // process.exit();
   });
 });
 
