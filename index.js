@@ -12,6 +12,8 @@ app.use(cors());
 const routes = require("./routes/index");
 app.use(routes);
 
-app.listen(4000, () => {
-  console.log("Listening on port 4000");
+app.set("port", process.env.PORT || 4000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
