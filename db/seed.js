@@ -44,7 +44,7 @@ UserLogin.deleteMany({}).then(() => {
       password: 13579,
     },
     {
-      username: "random",
+      username: "user",
       email: "random@gmail.com",
       password: 123456789,
     },
@@ -58,7 +58,7 @@ UserLogin.deleteMany({}).then(() => {
 UserHabits.deleteMany({}).then(() => {
   UserHabits.create([
     {
-      username: "random",
+      username: "user",
       habitName: "Drinking water",
       goal: "To drink more water",
       daysOfWeek: {
