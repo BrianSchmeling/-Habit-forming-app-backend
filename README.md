@@ -1,5 +1,7 @@
 ###MyHabits
 
+![Screen Shot 2022-06-29 at 9 35 53 AM](https://user-images.githubusercontent.com/99563824/176451845-bedc33f3-31a2-406e-a805-5eb16e0202e3.png)
+
 MyHabits is an app to set and keep track of goals.
 
 ##Technology:
@@ -7,6 +9,8 @@ MyHabits is an app to set and keep track of goals.
 HTML, CSS, Javascript, React, Mongoose, Express, Tailwind, Axios
 
 ##WireFraming
+
+![9e1c404d-12d4-4bbd-9c16-5c2b8fe3ebc8](https://user-images.githubusercontent.com/99563824/176451896-66dc0c93-d7d9-4e03-9b0c-d3ef059aba05.png)
 
 ##User Stories:
 
