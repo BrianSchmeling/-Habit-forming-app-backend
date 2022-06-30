@@ -1,6 +1,6 @@
 const Habits = require("../models/Habits");
 const UserLogin = require("../models/UserLogin");
-const UserHabits = require("../models/UserHabits")
+const UserHabits = require("../models/UserHabits");
 
 Habits.deleteMany({}).then(() => {
   Habits.create([
@@ -50,7 +50,7 @@ UserLogin.deleteMany({}).then(() => {
     },
   ]).then((login) => {
     console.log(login);
-    res.json(login);
+    // res.json(login);
     // process.exit();
   });
 });
@@ -70,8 +70,8 @@ UserHabits.deleteMany({}).then(() => {
         saturday: true,
         sunday: true,
       },
-      startingDate: 7/28/2022,
-      targetDate: 8/28/2022,
+      startingDate: 7 / 28 / 2022,
+      targetDate: 8 / 28 / 2022,
     },
     {
       username: "artan",
@@ -86,8 +86,8 @@ UserHabits.deleteMany({}).then(() => {
         saturday: true,
         sunday: true,
       },
-      startingDate: 7/28/2022,
-      targetDate: 9/14/2022,
+      startingDate: 7 / 28 / 2022,
+      targetDate: 9 / 14 / 2022,
     },
     {
       username: "jeff",
@@ -102,8 +102,8 @@ UserHabits.deleteMany({}).then(() => {
         saturday: false,
         sunday: false,
       },
-      startingDate: 7/28/2022,
-      targetDate: 9/14/2022,
-    }
-  ])
-})
+      startingDate: 7 / 28 / 2022,
+      targetDate: 9 / 14 / 2022,
+    },
+  ]);
+});
