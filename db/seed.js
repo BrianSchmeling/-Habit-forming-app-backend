@@ -3,6 +3,7 @@ const UserLogin = require("../models/UserLogin");
 const UserHabits = require("../models/UserHabits");
 
 Habits.deleteMany({}).then(() => {
+  console.log("Seeding Habits");
   Habits.create([
     {
       name: "Running",
@@ -22,6 +23,7 @@ Habits.deleteMany({}).then(() => {
 });
 
 UserLogin.deleteMany({}).then(() => {
+  console.log("Seeding Users");
   UserLogin.create([
     {
       username: "artan",
@@ -56,6 +58,7 @@ UserLogin.deleteMany({}).then(() => {
 });
 
 UserHabits.deleteMany({}).then(() => {
+  console.log("Seeding User Habits");
   UserHabits.create([
     {
       username: "user",
